@@ -11,6 +11,8 @@ from utils import clear_folder, delete_text_files
 
 # Load environment variables
 load_dotenv()
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+print("GOOGLE_API_KEY found:", os.getenv("GOOGLE_API_KEY") is not None)
 
 # Prepare document folder
 FOLDER_PATH = "docs"
